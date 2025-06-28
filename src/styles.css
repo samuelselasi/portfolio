@@ -124,11 +124,11 @@ section img.background {
   100% { transform: translateX(-50%) translateY(20px); }
 }
 
-/* About (One Punch Man Comic Style) */
-.about-onepunch {
+/* About, Education, Portfolio, Footer (One Punch Man Comic Style) */
+.about-onepunch,
+.comic-bg-wrap {
   position: relative;
-  background: linear-gradient(135deg, #ffe259 0%, #ffa751 100%);
-  opacity: 0.85;
+  background: linear-gradient(135deg, rgba(255,226,89,0.85) 0%, rgba(255,167,81,0.85) 100%);
   min-height: 100vh;
   overflow: hidden;
 }
@@ -291,6 +291,7 @@ section img.background {
   width: 100vw;
 }
 
+/* Portfolio Comic Style */
 .portfolio-comic-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -339,6 +340,23 @@ section img.background {
   font-size: 1.1rem;
   color: #4e567e;
   font-family: 'Montserrat', sans-serif;
+}
+
+/* Responsive adjustments */
+@media (max-width: 700px) {
+  .home-comic-card,
+  .about-comic-card,
+  .portfolio-comic-card,
+  .education-cell,
+  .comic-edu-cell {
+    width: 95vw !important;
+    margin: 1rem auto !important;
+    padding: 1.2rem !important;
+    font-size: 1rem !important;
+  }
+  .portfolio-comic-container {
+    grid-template-columns: 1fr !important;
+  }
 }
 
 /* --- End */
