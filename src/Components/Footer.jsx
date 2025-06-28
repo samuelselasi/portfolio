@@ -15,7 +15,7 @@ const Footer = (props) => {
 
   return (
     <footer
-      id="footer"
+      id="contact"
       style={{
         display: "flex",
         flexDirection: "column",
