@@ -1,0 +1,50 @@
+.header-bar {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  background: rgba(255,255,255,0.92);
+  padding: 1rem 0.5rem;
+  top: 0;
+  width: 100vw;
+  z-index: 10;
+  box-shadow: 0 4px 16px rgba(230,57,70,0.08);
+  border-bottom: 4px solid #e63946;
+  font-family: 'Bangers', 'Montserrat', sans-serif;
+  letter-spacing: 1px;
+}
+
+.header-link {
+  color: #e63946;
+  font-size: 1.5rem;
+  text-decoration: none;
+  padding: 0.3rem 1.2rem;
+  border-radius: 12px;
+  transition: all 0.2s cubic-bezier(.68,-0.55,.27,1.55);
+  font-family: 'Bangers', cursive;
+  position: relative;
+}
+
+.header-link:hover {
+  background: #ffe259;
+  color: #9c0402;
+  box-shadow: 0 2px 12px #ffa75199;
+  transform: scale(1.12) rotate(-2deg);
+  text-shadow: 2px 2px 0 #fff, 4px 4px 0 #e63946;
+}
+
+@media (max-width: 700px) {
+  .header-bar {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.7rem 0.2rem;
+    align-items: center;
+    width: 100vw;
+    left: 0;
+    right: 0;
+  }
+  .header-link {
+    font-size: 1.1rem;
+    padding: 0.3rem 0.7rem;
+  }
+}

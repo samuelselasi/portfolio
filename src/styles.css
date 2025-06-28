@@ -301,8 +301,47 @@ section img.background {
 }
 
 @media (max-width: 900px) {
-  .portfolio-comic-container {
-    grid-template-columns: 1fr;
+  .portfolio-comic-container,
+  .education-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .home-comic-card,
+  .about-comic-card,
+  .portfolio-comic-card,
+  .education-cell,
+  .comic-edu-cell {
+    width: 98vw !important;
+    margin: 1rem auto !important;
+    padding: 1rem !important;
+    font-size: 1rem !important;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+  .about-comic-card,
+  .home-comic-card {
+    width: 98vw !important;
+    padding: 1.2rem !important;
+  }
+  .comic-main-title {
+    font-size: 2.2rem !important;
+  }
+  .comic-main-subtitle {
+    font-size: 1.2rem !important;
+  }
+  .skills-comic-list {
+    columns: 1 !important;
+    margin: 1rem !important;
+    font-size: 1rem !important;
+  }
+  .comic-arrow {
+    bottom: 1.5rem;
+  }
+  section {
+    padding: 0 !important;
   }
 }
 
@@ -349,13 +388,34 @@ section img.background {
   .portfolio-comic-card,
   .education-cell,
   .comic-edu-cell {
-    width: 95vw !important;
+    width: 98vw !important;
     margin: 1rem auto !important;
+    padding: 1rem !important;
+    font-size: 1rem !important;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+  .about-comic-card,
+  .home-comic-card {
+    width: 98vw !important;
     padding: 1.2rem !important;
+  }
+  .comic-main-title {
+    font-size: 2.2rem !important;
+  }
+  .comic-main-subtitle {
+    font-size: 1.2rem !important;
+  }
+  .skills-comic-list {
+    columns: 1 !important;
+    margin: 1rem !important;
     font-size: 1rem !important;
   }
-  .portfolio-comic-container {
-    grid-template-columns: 1fr !important;
+  .comic-arrow {
+    bottom: 1.5rem;
+  }
+  section {
+    padding: 0 !important;
   }
 }
 
