@@ -1,86 +1,46 @@
-/**
- * About component
- *
- * Space for you to describe more about yourself.
- */
-
 import React from "react";
-
-/**
- * About background image
- *
- * Below is a sample image. Upload the image of your choice into the "images"
- * directory and import here for use. Then, set imageAltText to string that 
- * represents what you see in that image.
- *
- * Need an image? Check out https://unsplash.com to download a image you
- * freely use on your site.
- */
 import image from "../images/motion-background.jpg";
 
-const imageAltText = "purple and blue abstract background";
+const imageAltText = "comic burst background in red and yellow";
 
-/**
- * Sort description that expands on your title on the Home component.
- */
 const description =
-  "I'm a Master's student in Computer Science at the University of Ghana, specializing in backend development. I enjoy designing efficient, scalable systems and take pride in building clean, reliable APIs and server-side logic that power seamless user experiences.";
+  "I'm a Master's student in Computer Science at the University of Ghana, specializing in backend development. Like Saitama, I believe in relentless improvement and delivering results with a single, decisive punch. My code is clean, efficient, and always ready for the next challenge!";
 
-/**
- * List of some of skills or technologies you work on, are learning,
- * passionate about, or enjoy,
- */
 const skillsList = [
   "Backend development",
-  "API design and documentation",
-  "Database design",
-  "Containerization",
+  "API design (with a punch!)",
+  "Database mastery",
+  "Containerization (Docker Hero)",
   "Web server configuration",
-  "Version control",
-  "Graphic design",
+  "Version control (Git Justice)",
+  "Comic-style UI/UX",
   "Technical writing",
   "Project management",
 ];
 
-/**
- * Use this to give more information about what you are passionate about,
- * how you best work, or even a quote. This will help someone learn more
- * about you on a professional level.
- */
 const detailOrQuote =
-  "I'm passionate about building reliable backend systems that power meaningful digital experiences. I believe great backend engineering isn't just about code, but about creating infrastructure that supports accessible, inclusive, and user-driven design. My background in UX and design helps me approach system development with empathy and creativity.";
+  "“100 push-ups, 100 sit-ups, 100 squats, and a 10km run EVERY SINGLE DAY!” — I bring the same discipline to backend engineering. My mission: build systems so strong, they never need a second punch.";
 
 const About = () => {
   return (
-    <section className="padding" id="about">
-      <img className="background" src={image} alt={imageAltText} />
-      <div
-        style={{
-          backgroundColor: "white",
-          width: "50%",
-          padding: "4rem",
-          margin: "3rem auto",
-          textAlign: "center",
-        }}
-      >
-        <h2>About Myself</h2>
+    <section className="about-onepunch" id="about">
+      <img className="background comic-bg" src={image} alt={imageAltText} />
+      <div className="about-comic-card punch-in">
+        <h2>
+          <span role="img" aria-label="punch">
+            👊
+          </span>{" "}
+          About Myself
+        </h2>
         <p className="large">{description}</p>
-        <hr />
-        <ul
-          style={{
-            textAlign: "left",
-            columns: 2,
-            fontSize: "1.25rem",
-            margin: "2rem 3rem",
-            gap: "3rem",
-          }}
-        >
+        <hr className="comic-hr" />
+        <ul className="skills-comic-list">
           {skillsList.map((skill) => (
             <li key={skill}>{skill}</li>
           ))}
         </ul>
-        <hr />
-        <p style={{ padding: "1rem 3rem 0" }}>{detailOrQuote}</p>
+        <hr className="comic-hr" />
+        <p className="comic-quote">{detailOrQuote}</p>
       </div>
     </section>
   );

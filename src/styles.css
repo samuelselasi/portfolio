@@ -1,9 +1,7 @@
-/**
-* CSS file to hold styles that apply across the application
-*/
 @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Montserrat:wght@200;400;600;800&display=swap");
 
+/* Global styles */
 html,
 body {
   font-family: "Montserrat", sans-serif;
@@ -29,10 +27,6 @@ section.min-height {
   min-height: 100vh;
 }
 
-section.padding {
-  padding: 5rem 0;
-}
-
 section img.background {
   height: 100%;
   left: 50%;
@@ -42,105 +36,309 @@ section img.background {
   top: 0;
   transform: translate(-50%, 0);
   width: 100vmax;
-  z-index: -1;
 }
 
-h1 {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 7rem;
-  font-weight: 400;
-  line-height: 0.8;
+/* Home (One Punch Man) styles */
+.home-onepunch {
+  position: relative;
+  background: linear-gradient(120deg, #ffe259 0%, #ffa751 100%);
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.home-bg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100vw;
+  height: 100vh;
+  object-fit: contain;
+  transform: translateX(-50%);
+  z-index: 1;
+  opacity: 1;
+  filter: none;
+  pointer-events: none;
+}
+
+.home-comic-card {
+  position: relative;
+  z-index: 2;
+  background: #fffbe6;
+  opacity: 0.95;
+  border: 6px solid #e63946;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(230,57,70,0.15), 0 0 0 8px #fffbe6;
+  padding: 2.5rem 2rem;
+  margin: 7rem 3rem 0 3rem;
+  text-align: left;
+  font-family: 'Bangers', 'Montserrat', sans-serif;
+  animation: punchIn 0.7s cubic-bezier(.68,-0.55,.27,1.55);
+}
+
+.comic-main-title {
+  font-family: 'Bangers', cursive;
+  font-size: 4rem;
+  color: #e63946;
+  letter-spacing: 2px;
+  margin: 0 0 1rem 0;
+  text-shadow: 2px 2px 0 #fff, 4px 4px 0 #e63946;
+}
+
+.comic-main-subtitle {
+  font-family: 'Bangers', cursive;
+  font-size: 2.2rem;
+  color: #222;
   margin: 0;
+  text-shadow: 1px 1px 0 #fff, 2px 2px 0 #e63946;
 }
 
-h2 {
-  font-size: 2rem;
-  font-weight: 400;
-  margin: 0;
-  padding-top: 1rem;
+.comic-arrow {
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  animation: bounceArrow 1.2s infinite alternate;
 }
 
-h3 {
-  font-weight: 400;
-  font-size: 1.25rem;
-  margin: 0;
+@keyframes punchIn {
+  0% {
+    transform: scale(0.2) rotate(-10deg);
+    opacity: 0;
+    filter: blur(8px);
+  }
+  70% {
+    transform: scale(1.1) rotate(2deg);
+    opacity: 1;
+    filter: blur(0);
+  }
+  100% {
+    transform: scale(1) rotate(0);
+    opacity: 1;
+    filter: blur(0);
+  }
 }
 
-p {
-  font-size: 18px;
-  line-height: 1.5;
-  margin-bottom: 0;
-  font-weight: 300;
+@keyframes bounceArrow {
+  0% { transform: translateX(-50%) translateY(0); }
+  100% { transform: translateX(-50%) translateY(20px); }
 }
 
-p.large {
-  font-size: 24px;
+/* About (One Punch Man Comic Style) */
+.about-onepunch {
+  position: relative;
+  background: linear-gradient(135deg, #ffe259 0%, #ffa751 100%);
+  opacity: 0.85;
+  min-height: 100vh;
+  overflow: hidden;
 }
 
-p.small {
-  font-size: 15px;
+.comic-bg {
+  filter: brightness(0.7) blur(2px) saturate(1.5);
+  opacity: 0.5;
+  z-index: 0;
 }
 
-hr {
-  margin: 2.5rem;
+.about-comic-card {
+  position: relative;
+  z-index: 2;
+  background: #fffbe6;
+  border: 6px solid #e63946;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(230,57,70,0.15), 0 0 0 8px #fffbe6;
+  width: 60%;
+  margin: 4rem auto;
+  padding: 3rem 2rem;
+  text-align: center;
+  font-family: 'Bangers', 'Montserrat', sans-serif;
+  animation: punchIn 0.7s cubic-bezier(.68,-0.55,.27,1.55);
 }
 
-li {
-  line-height: 1.7;
+.about-comic-card h2 {
+  font-family: 'Bangers', cursive;
+  font-size: 3rem;
+  color: #e63946;
+  letter-spacing: 2px;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 0 #fff, 4px 4px 0 #e63946;
 }
 
-li::marker {
-  color: #4e567e;
+.comic-hr {
+  border: none;
+  border-top: 4px dashed #e63946;
+  margin: 2rem 0;
 }
 
-a {
-  color: black;
-  text-decoration: none;
+.skills-comic-list {
+  columns: 2;
+  font-size: 1.3rem;
+  margin: 2rem 3rem;
+  gap: 3rem;
+  list-style: none;
+  padding: 0;
 }
 
-a:hover {
-  color: #4e567e;
+.skills-comic-list li {
+  margin-bottom: 1rem;
+  position: relative;
+  padding-left: 2rem;
+  font-family: 'Bangers', cursive;
+  color: #222;
 }
 
-.container {
+.skills-comic-list li::before {
+  content: "💥";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.comic-quote {
+  font-size: 1.2rem;
+  color: #e63946;
+  font-family: 'Bangers', cursive;
+  background: #fff3cd;
+  border-radius: 12px;
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+  box-shadow: 0 2px 8px rgba(230,57,70,0.07);
+}
+
+/* Education grid styles */
+.education-grid {
   display: grid;
-  grid-gap: 20px;
-  grid-template-columns: 330px 300px;
-  margin: 20px auto;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin-top: 2rem;
 }
 
-.container .box {
+.education-cell {
+  background: #fff;
   border-radius: 10px;
-  border: 1px solid rgb(204, 204, 204);
+  border: 1px solid #e0e0e0;
+  padding: 1.5rem 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  padding: 24px 16px;
-  text-align: center;
+  align-items: flex-start;
 }
 
-img.socialIcon {
-  height: 30px;
-  width: 30px;
+.education-cell strong {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
 }
 
-/* add a smooth scroll */
-html {
-  scroll-behavior: smooth;
+.education-cell span {
+  margin-top: 0.5rem;
+  color: #4e567e;
+  font-size: 0.95rem;
 }
 
-/* add a slide In Left animation */
-@keyframes slideInLeft {
-  from {
-    transform: translateX(-100%);
-    opacity: 0;
+.comic-edu-cell {
+  position: relative;
+  border-width: 4px;
+  border-style: solid;
+  border-radius: 18px;
+  background: #fffbe6;
+  opacity: 0.95;
+  box-shadow: 0 4px 16px #e6394622, 0 0 0 6px #fffbe6;
+  padding: 2rem 1.2rem 1.2rem 1.2rem;
+  margin-bottom: 1rem;
+  font-family: 'Bangers', 'Montserrat', sans-serif;
+  animation: punchIn 0.7s cubic-bezier(.68,-0.55,.27,1.55);
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: transform 0.2s cubic-bezier(.68,-0.55,.27,1.55), box-shadow 0.2s;
+}
+
+.comic-edu-cell:hover {
+  transform: scale(1.04) rotate(-1deg);
+  box-shadow: 0 8px 32px #e6394644, 0 0 0 8px #fffbe6;
+  z-index: 2;
+}
+
+.comic-edu-badge {
+  font-size: 1rem;
+  color: #fff;
+  font-family: 'Bangers', cursive;
+  padding: 0.3rem 1rem;
+  border-radius: 12px 0 12px 0;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+  box-shadow: 2px 2px 0 #e63946aa;
+  text-shadow: 1px 1px 0 #e63946;
+  align-self: flex-end;
+}
+
+.comic-edu-cell strong {
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+  color: #e63946;
+  text-shadow: 1px 1px 0 #fff, 2px 2px 0 #e6394622;
+}
+
+.comic-edu-cell span {
+  margin-top: 0.7rem;
+  color: #4e567e;
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.comic-bg-wrap {
+  min-height: 100vh;
+  width: 100vw;
+}
+
+.portfolio-comic-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  width: 100%;
+  align-items: stretch;
+}
+
+@media (max-width: 900px) {
+  .portfolio-comic-container {
+    grid-template-columns: 1fr;
   }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
 }
 
-.slide-in-left {
-  animation: 1s ease-out 0s 1 slideInLeft;
+.portfolio-comic-card {
+  background: #fffbe6;
+  border: 4px solid #e63946;
+  border-radius: 18px;
+  box-shadow: 0 4px 16px #e6394622, 0 0 0 6px #fffbe6;
+  padding: 2rem 1.2rem 1.2rem 1.2rem;
+  margin-bottom: 1rem;
+  font-family: 'Bangers', 'Montserrat', sans-serif;
+  animation: punchIn 0.7s cubic-bezier(.68,-0.55,.27,1.55);
+  min-height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: transform 0.2s cubic-bezier(.68,-0.55,.27,1.55), box-shadow 0.2s;
 }
+
+.portfolio-comic-card:hover {
+  transform: scale(1.04) rotate(-1deg);
+  box-shadow: 0 8px 32px #e6394644, 0 0 0 8px #fffbe6;
+  z-index: 2;
+}
+
+.portfolio-comic-card h3 {
+  font-family: 'Bangers', cursive;
+  font-size: 1.5rem;
+  color: #e63946;
+  margin-bottom: 0.7rem;
+  text-shadow: 1px 1px 0 #fff, 2px 2px 0 #e6394622;
+}
+
+.portfolio-comic-card p {
+  font-size: 1.1rem;
+  color: #4e567e;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* --- End */

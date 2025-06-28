@@ -11,7 +11,8 @@ import Footer from "./Components/Footer";
 import Header from "./Components/Header";
 import Home from "./Components/Home";
 import Portfolio from "./Components/Portfolio";
-
+import Education from "./Components/Education";
+import bgImage from "./images/pngwing.com_1.png";
 import "./styles.css";
 
 /**
@@ -35,6 +36,7 @@ const siteProps = {
   youTube: "OnePunchCoder",
 };
 
+// Define primary and secondary colors for the theme
 const primaryColor = "#9c0402";
 const secondaryColor = "#d2eff1";
 
@@ -44,8 +46,17 @@ const App = () => {
       <Header />
       <Home name={siteProps.name} title={siteProps.title} />
       <About />
-      <Portfolio />
-      <Footer {...siteProps} primaryColor={primaryColor} secondaryColor={secondaryColor} />
+      <div
+        className="about-onepunch comic-bg-wrap"
+        style={{
+          background: `linear-gradient(135deg, rgba(255,226,89,0.7) 0%, rgba(255,167,81,0.7) 100%), url(${bgImage}) center/cover no-repeat fixed`,
+          width: "100vw",
+        }}
+      >
+        <Education />
+        <Portfolio />
+        <Footer {...siteProps} primaryColor={primaryColor} secondaryColor={secondaryColor} />
+      </div>
     </div>
   );
 };
