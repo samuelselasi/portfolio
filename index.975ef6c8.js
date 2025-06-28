@@ -28596,84 +28596,42 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-const headerStyle = {
-    position: "fixed",
-    display: "flex",
-    justifyContent: "center",
-    gap: "2rem",
-    background: "rgba(255,255,255,0.92)",
-    padding: "1rem 0.5rem",
-    top: 0,
-    width: "100%",
-    zIndex: 10,
-    boxShadow: "0 4px 16px rgba(230,57,70,0.08)",
-    borderBottom: "4px solid #e63946",
-    fontFamily: "'Bangers', 'Montserrat', sans-serif",
-    letterSpacing: "1px"
-};
-const linkStyle = {
-    color: "#e63946",
-    fontSize: "1.5rem",
-    textDecoration: "none",
-    padding: "0.3rem 1.2rem",
-    borderRadius: "12px",
-    transition: "all 0.2s cubic-bezier(.68,-0.55,.27,1.55)",
-    fontFamily: "'Bangers', cursive",
-    position: "relative"
-};
+var _headerCss = require("./Header.css"); // Create this file for header-specific styles
 const Header = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        style: headerStyle,
+        className: "header-bar",
         children: [
-            [
-                "Home",
-                "About",
-                "Education",
-                "Portfolio",
-                "Contact"
-            ].map((text)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                    href: `#${text.toLowerCase()}`,
-                    style: linkStyle,
-                    className: "header-link",
-                    children: [
-                        text === "Home" && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                            role: "img",
-                            "aria-label": "punch",
-                            children: [
-                                "\uD83D\uDC4A",
-                                " "
-                            ]
-                        }, void 0, true, {
-                            fileName: "src/Components/Header.jsx",
-                            lineNumber: 36,
-                            columnNumber: 13
-                        }, undefined),
-                        text
-                    ]
-                }, text, true, {
-                    fileName: "src/Components/Header.jsx",
-                    lineNumber: 34,
-                    columnNumber: 9
-                }, undefined)),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("style", {
-                children: `
-          .header-link:hover {
-            background: #ffe259;
-            color: #9c0402;
-            box-shadow: 0 2px 12px #ffa75199;
-            transform: scale(1.12) rotate(-2deg);
-            text-shadow: 2px 2px 0 #fff, 4px 4px 0 #e63946;
-          }
-        `
-            }, void 0, false, {
+            "Home",
+            "About",
+            "Education",
+            "Portfolio",
+            "Contact"
+        ].map((text)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                href: `#${text.toLowerCase()}`,
+                className: "header-link",
+                children: [
+                    text === "Home" && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        role: "img",
+                        "aria-label": "punch",
+                        children: [
+                            "\uD83D\uDC4A",
+                            " "
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/Components/Header.jsx",
+                        lineNumber: 14,
+                        columnNumber: 13
+                    }, undefined),
+                    text
+                ]
+            }, text, true, {
                 fileName: "src/Components/Header.jsx",
-                lineNumber: 43,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true, {
+                lineNumber: 8,
+                columnNumber: 9
+            }, undefined))
+    }, void 0, false, {
         fileName: "src/Components/Header.jsx",
-        lineNumber: 32,
+        lineNumber: 6,
         columnNumber: 5
     }, undefined);
 };
@@ -28687,7 +28645,7 @@ $RefreshReg$(_c, "Header");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"jIEVO":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./Header.css":"e1w35"}],"e1w35":[function() {},{}],"jIEVO":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$0d4d = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
