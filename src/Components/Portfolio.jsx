@@ -26,33 +26,33 @@ const imageAltText = "desktop with books and laptop";
 /**
  * Project list
  *
- * An array of objects that will be used to display for your project
- * links section. Below is a sample, update to reflect links you'd like to highlight.
+ * An array of projects that showcase your backend skills,
+ * design strengths, and engineering versatility.
  */
 const projectList = [
   {
-    title: "10 Things To Know About Azure Static Web Apps 🎉",
+    title: "AfriLegal API",
     description:
-      "Collaboration to create a beginner friendly article to help explain Azure Static Web Apps and tooling to get started.",
-    url: "https://dev.to/azure/10-things-to-know-about-azure-static-web-apps-3n4i",
+      "An African constitution API backend built with Python's FastAPI and PostgreSQL. Includes a minimal landing page using HTML and CSS.",
+    url: "https://github.com/samuelselasi/AfriLegal_API",
   },
   {
-    title: "Web Development for Beginners",
+    title: "Airbnb Clone",
     description:
-      "Contributed sketch note imagery to accompany each lesson. These help provide visual representation of what is being taught.",
-    url: "https://github.com/microsoft/web-dev-for-beginners",
+      "A full-stack clone of Airbnb using Flask, MySQL, and JavaScript. Includes dynamic content rendering and static page design.",
+    url: "https://github.com/samuelselasi/AirBnB_clone_v4",
   },
   {
-    title: "My Resume Site",
+    title: "Simple Shell",
     description:
-      "Created from Microsoft's resume workshop and deployed to GitHub pages. Includes my experience and design abilities.",
-    url: "https://github.com/microsoft/workshop-library/tree/main/full/build-resume-website",
+      "A custom Linux shell built with C. Supports aliases, separators, file-based input, and basic command execution on Ubuntu.",
+    url: "https://github.com/samuelselasi/simple_shell",
   },
   {
-    title: "GitHub Codespaces and github.dev",
+    title: "WordPress Business Sites",
     description:
-      "Video interview to explain when to use GitHub.dev versus GitHub Codespaces, and how best to use each tool.",
-    url: "https://www.youtube.com/watch?v=c3hHhRME_XI",
+      "Designed and deployed websites for agribusiness and consulting firms using WordPress. Includes PM360 Consult, FESF Foundation, and Inicio BD.",
+    url: "https://www.fesffoundation.com/",
   },
 ];
 

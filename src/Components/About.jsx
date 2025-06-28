@@ -24,19 +24,22 @@ const imageAltText = "purple and blue abstract background";
  * Sort description that expands on your title on the Home component.
  */
 const description =
-  "I'm a UI/UX student studying at Barnett Technical University. I enjoy creating unique and simplistic user interfaces in creative ways.";
+  "I'm a Master's student in Computer Science at the University of Ghana, specializing in backend development. I enjoy designing efficient, scalable systems and take pride in building clean, reliable APIs and server-side logic that power seamless user experiences.";
 
 /**
  * List of some of skills or technologies you work on, are learning,
  * passionate about, or enjoy,
  */
 const skillsList = [
-  "Web design",
-  "User experience",
-  "Inclusive design",
-  "Focus group testing",
-  "Mobile user interfaces",
-  "Graphic design",
+  "Backend development (Python, FastAPI, Flask, Django)",
+  "API design and documentation",
+  "Database design (PostgreSQL, MySQL, Oracle, MongoDB)",
+  "Containerization (Docker, Kubernetes)",
+  "Web server configuration (Apache, Nginx)",
+  "Version control (Git, GitHub, GitLab)",
+  "Graphic design (Photoshop, Illustrator)",
+  "Technical writing (GitHub, Medium, LinkedIn)",
+  "Project management (Trello, GitHub Projects)",
 ];
 
 /**
@@ -45,7 +48,7 @@ const skillsList = [
  * about you on a professional level.
  */
 const detailOrQuote =
-  "I am passionate about solving problems in new creative ways to drive innovation. By leveraging my UI/UX experience I continually look for new and better ways to make tech accessible by all.";
+  "I'm passionate about building reliable backend systems that power meaningful digital experiences. I believe great backend engineering isn't just about code — it's about creating infrastructure that supports accessible, inclusive, and user-driven design. My background in UX and design helps me approach system development with empathy and creativity.";
 
 const About = () => {
   return (
