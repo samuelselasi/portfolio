@@ -31,15 +31,15 @@ const description =
  * passionate about, or enjoy,
  */
 const skillsList = [
-  "Backend development (Python, FastAPI, Flask, Django)",
+  "Backend development",
   "API design and documentation",
-  "Database design (PostgreSQL, MySQL, Oracle, MongoDB)",
-  "Containerization (Docker, Kubernetes)",
-  "Web server configuration (Apache, Nginx)",
-  "Version control (Git, GitHub, GitLab)",
-  "Graphic design (Photoshop, Illustrator)",
-  "Technical writing (GitHub, Medium, LinkedIn)",
-  "Project management (Trello, GitHub Projects)",
+  "Database design",
+  "Containerization",
+  "Web server configuration",
+  "Version control",
+  "Graphic design",
+  "Technical writing",
+  "Project management",
 ];
 
 /**
@@ -48,7 +48,7 @@ const skillsList = [
  * about you on a professional level.
  */
 const detailOrQuote =
-  "I'm passionate about building reliable backend systems that power meaningful digital experiences. I believe great backend engineering isn't just about code — it's about creating infrastructure that supports accessible, inclusive, and user-driven design. My background in UX and design helps me approach system development with empathy and creativity.";
+  "I'm passionate about building reliable backend systems that power meaningful digital experiences. I believe great backend engineering isn't just about code, but about creating infrastructure that supports accessible, inclusive, and user-driven design. My background in UX and design helps me approach system development with empathy and creativity.";
 
 const About = () => {
   return (
