@@ -127,10 +127,9 @@ section img.background {
   }
 }
 
-.about-onepunch {
-  opacity: .85;
+.about-onepunch, .comic-bg-wrap {
   min-height: 100vh;
-  background: linear-gradient(135deg, #ffe259 0%, #ffa751 100%);
+  background: linear-gradient(135deg, #ffe259d9 0%, #ffa751d9 100%);
   position: relative;
   overflow: hidden;
 }
@@ -340,6 +339,19 @@ section img.background {
   color: #4e567e;
   font-family: Montserrat, sans-serif;
   font-size: 1.1rem;
+}
+
+@media (max-width: 700px) {
+  .home-comic-card, .about-comic-card, .portfolio-comic-card, .education-cell, .comic-edu-cell {
+    width: 95vw !important;
+    margin: 1rem auto !important;
+    padding: 1.2rem !important;
+    font-size: 1rem !important;
+  }
+
+  .portfolio-comic-container {
+    grid-template-columns: 1fr !important;
+  }
 }
 
 /*# sourceMappingURL=index.4d663569.css.map */
